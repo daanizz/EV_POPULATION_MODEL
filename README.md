@@ -14,8 +14,8 @@ the project is a simple, task manager-with features:
 ### (more features are to be added, this is a part of study)
 
 ## Tools used:
--Nodejs:
-  -mongoose,express,dotenv,nodemon,bcrypt,jsonwebtoken..etc
--MongoDB
+- Nodejs:
+  - mongoose,express,dotenv,nodemon,bcrypt,jsonwebtoken..etc
+- MongoDB
 
 

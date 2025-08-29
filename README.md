@@ -5,6 +5,7 @@
 ## Description
 
 the project is a simple, task manager-with features:
+
 - Login,create account
 - add new task
 - view tasks
@@ -14,8 +15,8 @@ the project is a simple, task manager-with features:
 ### (more features are to be added, this is a part of study)
 
 ## Tools used:
+
 - Nodejs:
   - mongoose,express,dotenv,nodemon,bcrypt,jsonwebtoken..etc
 - MongoDB
-
-
+  -Reactjs

@@ -1,0 +1,98 @@
+/* ===============================
+   NavBar.css - Professional Style
+   =============================== */
+
+/* Reset default list styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #1e293b; /* dark slate */
+  color: #f1f5f9;            /* light text */
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand name (Task-Wallet) */
+nav h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f8fafc;
+  letter-spacing: 1px;
+}
+
+/* All li spacing */
+nav li {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Links */
+nav a,
+nav li {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #38bdf8; /* cyan accent */
+}
+
+/* Login link styling */
+.login-link {
+  padding: 0.4rem 0.9rem;
+  background-color: #38bdf8;
+  color: #0f172a;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-link:hover {
+  background-color: #0ea5e9;
+  transform: translateY(-1px);
+}
+
+/* Logout button */
+nav button {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ef4444;
+  color: #f8fafc;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav button:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav li {
+    margin: 0.5rem 0;
+  }
+
+  nav h1 {
+    margin-bottom: 0.8rem;
+  }
+}

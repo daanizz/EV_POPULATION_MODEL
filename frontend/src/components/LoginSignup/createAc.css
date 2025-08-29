@@ -1,0 +1,80 @@
+/* ==============================
+   CreateAc.css - Account Form
+   ============================== */
+
+.create-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* centers vertically */
+  background: #f8fafc; /* light background */
+  padding: 1rem;
+}
+
+.create-form {
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Inputs */
+.create-input {
+  margin-bottom: 1rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.create-input:focus {
+  outline: none;
+  border-color: #38bdf8; /* cyan */
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+/* Button */
+.create-btn {
+  padding: 0.8rem;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.create-btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-1px);
+}
+
+.create-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .create-form {
+    padding: 1.5rem;
+  }
+
+  .create-title {
+    font-size: 1.2rem;
+  }
+}

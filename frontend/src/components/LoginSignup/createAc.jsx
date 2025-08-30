@@ -15,7 +15,7 @@ export default function CreateAc() {
   /**@type {React.FormEventHandler<HTMLFormElement>} */
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log("clicked and reached handler");
+    // console.log("clicked and reached handler");
     const response = await fetch(`${API_URL}/login/createAc`, {
       method: "POST",
       body: JSON.stringify({ name, email, password, confirmPassword }),
@@ -24,9 +24,12 @@ export default function CreateAc() {
       },
     });
     if (response.ok) {
-      alert("User created Ssuccefully");
+      alert("User created Succefully");
       navigate("/login");
+      // return;
       // ✅ Redirect to login page after success
+    } else {
+      alert("internal error");
     }
   }
 
@@ -75,7 +78,7 @@ export default function CreateAc() {
       />
 
       <button type="submit" className="create-btn">
-        <Link to="/LoginForm">Create</Link>
+        Create
       </button>
     </form>
   );

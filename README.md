@@ -19,4 +19,4 @@ the project is a simple, task manager-with features:
 - Nodejs:
   - mongoose,express,dotenv,nodemon,bcrypt,jsonwebtoken..etc
 - MongoDB
-  -Reactjs
+-Reactjs

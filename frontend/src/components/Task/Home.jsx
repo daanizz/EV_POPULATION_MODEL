@@ -20,14 +20,14 @@ export default function Home() {
             console.log("Fetched tasks:", data);
             setTasks(Array.isArray(data) ? data : []);
           } else {
-            alert("Something went wrong!!");
+            alert("Something went wrong!!:response,not ok..");
           }
         }
         if (!isLoggedIn) {
           setTasks([]);
         }
       } catch {
-        alert("Something went wrong!!");
+        alert("Something went wrong!!:cathc block");
       }
     }
 

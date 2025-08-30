@@ -24,6 +24,7 @@ export default function LoginForm() {
     });
     const data = await response.json();
     if (response.ok) {
+      alert("Login success");
       login(data.accessToken, data.user);
       navigate("/");
       return;

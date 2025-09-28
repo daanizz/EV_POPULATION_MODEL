@@ -1,3 +1,4 @@
+import { verifiedToken } from "../controller/JWTMiddleWare.js";
 import {
     allTasks,
     deleteAllTasks,
@@ -10,11 +11,11 @@ import { Router } from "express";
 
 const router = Router();
 
-router.get("/user/:id", allTasks);
-router.delete("/", deleteAllTasks);
-router.delete("/:id", deleteById);
-router.get("/:id", taskById);
-router.post("/", addNewTask);
-router.put("/:id", updateTask);
+router.get("/user/:id", verifiedToken, allTasks);
+router.delete("/", verifiedToken, deleteAllTasks);
+router.delete("/:id", verifiedToken, deleteById);
+router.get("/:id", verifiedToken, taskById);
+router.post("/", verifiedToken, addNewTask);
+router.put("/:id", verifiedToken, updateTask);
 
 export default router;

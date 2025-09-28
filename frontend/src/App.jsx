@@ -6,6 +6,7 @@ import Home from "./components/Task/Home.jsx";
 import Task from "./components/Task/Task.jsx";
 import AddTask from "./components/Task/AddTask.jsx";
 import RouterProtector from "./RouteProtect.jsx";
+import editTask from "./components/Task/ediTask.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<LoginForm />} />
       <Route path="/createAc" element={<CreateAc />} />
+      <Route path="/task/edit/:id" element={<editTask />} />
       <Route
         path="/task/:id"
         element={
@@ -24,9 +26,9 @@ function App() {
       <Route
         path="/task/addTask"
         element={
-          // <RouterProtector>
-          <AddTask />
-          // </RouterProtector>
+          <RouterProtector>
+            <AddTask />
+          </RouterProtector>
         }
       />
     </Routes>

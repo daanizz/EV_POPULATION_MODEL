@@ -9,8 +9,6 @@ export default function RouterProtector({ children }) {
   if (!isLoggedIn) {
     alert("Cant access this page, without logging in!!");
     navigate("/login");
-    return;
   }
-  navigate("/");
-  return;
+  return children;
 }

@@ -3,6 +3,7 @@ import * as dotenv from "dotenv";
 import loginRoute from "./routes/login.js";
 import dbConnection from "./config/dbconfig.js";
 import taskRoute from "./routes/taskRoute.js";
+import profileRoute from "./routes/profileRoute.js";
 import cors from "cors";
 
 const app = express();
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 
 app.use("/login", loginRoute);
 app.use("/task", taskRoute);
+app.use("/profile", profileRoute);
 
 app.listen(5050, () => {
     dbConnection();

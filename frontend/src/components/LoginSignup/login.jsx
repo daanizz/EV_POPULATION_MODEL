@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts";
-// import "./login.css";
+import "./login.css";
 const API_URL = import.meta.env.VITE_API_URL;
 
 export default function LoginForm() {
@@ -25,7 +25,7 @@ export default function LoginForm() {
     const data = await response.json();
     if (response.ok) {
       alert("Login success");
-      login(data.accessToken, data.user);
+      login(data.token, data.user);
       navigate("/");
       return;
       //its a context prop that have been passed to AuthContext...

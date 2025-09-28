@@ -90,15 +90,10 @@ export const updateTask = async (req, res) => {
         if (!toChange) {
             return res
                 .status(404)
-                .json({ error: "couldnt find the given collection" });
+                .json({ message: "couldnt find the given collection" });
         }
         const newChanges = req.body;
         const updates = {};
-        if (
-            newChanges.title !== undefined &&
-            newChanges.title !== toChange.title
-        )
-            updates.title = newChanges.title;
         if (
             newChanges.content !== undefined &&
             newChanges.content !== toChange.content
@@ -114,14 +109,9 @@ export const updateTask = async (req, res) => {
             newChanges.lastDate !== toChange.lastDate
         )
             updates.lastDate = newChanges.lastDate;
-        if (
-            newChanges.category !== undefined &&
-            newChanges.category !== toChange.category
-        )
-            updates.category = newChanges.category;
 
         if (Object.keys(updates).length > 0) {
-            await toChange.findByIdAndUpdate(id, updates);
+            await task.findByIdAndUpdate(id, updates);
             return res.status(200).json({
                 success: true,
                 message: "Successfully updated the changes",
@@ -132,6 +122,6 @@ export const updateTask = async (req, res) => {
             .status(400)
             .json({ message: "Bad request,no updates made.." });
     } catch (error) {
-        return res.status(500).json({ success: false });
+        return res.status(500).json({ message: false });
     }
 };

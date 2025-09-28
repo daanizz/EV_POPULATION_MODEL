@@ -1,96 +1,98 @@
-/* ==============================
-   login.css - Login Form Styles
-   ============================== */
-
-.login-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  background: #f8fafc;
-  padding: 1rem;
-}
-
+/* login.css */
 .login-form {
-  background: #ffffff;
-  padding: 2rem 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%;
   max-width: 400px;
-  display: flex;
-  flex-direction: column;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
 }
 
-.login-title {
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-size: 1.4rem;
+.login-form h2 {
+  font-size: 1.75rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .login-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
   margin-bottom: 1rem;
-  padding: 0.7rem 1rem;
-  border: 1px solid #cbd5e1;
+  border: 2px solid #e5e7eb;
   border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease-in-out;
+  background-color: #fafafa;
+  box-sizing: border-box;
 }
 
 .login-input:focus {
   outline: none;
-  border-color: #38bdf8; /* cyan */
-  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+  border-color: #10b981;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.login-input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
 }
 
 .login-btn {
-  padding: 0.8rem;
-  background: #38bdf8;
+  width: 100%;
+  padding: 0.875rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
   border: none;
   border-radius: 8px;
-  color: #0f172a;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.2s ease-in-out;
+  margin-top: 0.5rem;
 }
 
 .login-btn:hover {
-  background: #0ea5e9;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .login-btn:active {
   transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
 }
 
 .login-link-text {
-  margin-top: 1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #6b7280;
   font-size: 0.95rem;
-  color: #475569;
 }
 
 .login-link {
-  color: #38bdf8;
-  font-weight: 500;
+  color: #3b82f6;
   text-decoration: none;
-  transition: color 0.2s ease;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
 }
 
 .login-link:hover {
-  color: #0ea5e9;
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
-/* Responsive */
 @media (max-width: 480px) {
   .login-form {
+    margin: 1rem;
     padding: 1.5rem;
   }
-
-  .login-title {
-    font-size: 1.2rem;
+  
+  .login-form h2 {
+    font-size: 1.5rem;
   }
 }

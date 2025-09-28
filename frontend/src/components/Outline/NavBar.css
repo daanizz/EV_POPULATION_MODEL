@@ -1,98 +1,155 @@
-/* ===============================
-   NavBar.css - Professional Style
-   =============================== */
+/* NavBar.css */
+nav {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.75rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
 
-/* Reset default list styles */
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-
-  background-color: #1e293b; /* dark slate */
-  color: #f1f5f9;            /* light text */
-  padding: 0.8rem 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  list-style: none;
+  margin-block: 0;
+  padding-block: 0;
 }
 
-/* Brand name (Task-Wallet) */
-nav h1 {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #f8fafc;
-  letter-spacing: 1px;
-}
-
-/* All li spacing */
-nav li {
-  margin-left: 1.5rem;
-  font-size: 1rem;
+nav ul li {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
-/* Links */
-nav a,
-nav li {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s ease;
+nav ul li:first-child h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-nav a:hover {
-  color: #38bdf8; /* cyan accent */
+nav ul li:nth-child(2) {
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
+  margin-left: 2rem;
 }
 
-/* Login link styling */
-.login-link {
-  padding: 0.4rem 0.9rem;
-  background-color: #38bdf8;
-  color: #0f172a;
-  border-radius: 6px;
+nav ul li:last-child {
   font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #6b7280;
+  gap: 0.75rem;
 }
 
-.login-link:hover {
-  background-color: #0ea5e9;
-  transform: translateY(-1px);
-}
-
-/* Logout button */
-nav button {
-  padding: 0.4rem 0.9rem;
+nav ul li button {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
   border: none;
+  padding: 0.5rem 1rem;
   border-radius: 6px;
-  background-color: #ef4444;
-  color: #f8fafc;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.2s ease-in-out;
 }
 
-nav button:hover {
-  background-color: #dc2626;
+nav ul li button:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
   transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
 }
 
-/* Responsive for small screens */
+nav ul li button:active {
+  transform: translateY(0);
+}
+
+nav ul li a {
+  color: #3b82f6;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  background: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+nav ul li a:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+nav ul li a:active {
+  transform: translateY(0);
+}
+
+/* Welcome message styling */
+nav ul li:last-child {
+  font-size: 0.95rem;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
-
-  nav li {
-    margin: 0.5rem 0;
+  
+  nav ul li:first-child h1 {
+    font-size: 1.25rem;
   }
+  
+  nav ul li:nth-child(2) {
+    order: 3;
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  nav ul li:last-child {
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+  
+  nav ul li button,
+  nav ul li a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
 
-  nav h1 {
-    margin-bottom: 0.8rem;
+@media (max-width: 480px) {
+  nav {
+    padding: 0.5rem 0;
+  }
+  
+  nav ul {
+    padding: 0 0.5rem;
+  }
+  
+  nav ul li:first-child h1 {
+    font-size: 1.1rem;
+  }
+  
+  nav ul li button,
+  nav ul li a {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
   }
 }
